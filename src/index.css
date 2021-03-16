@@ -1,0 +1,134 @@
+:root {
+  --lighter: #3d3e6d;
+  --light: #303155;
+  --medium: #2b2a4c;
+  --dark: #211f3c;
+}
+
+body {
+  background: var(--light);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* app styles */
+.App {
+  background: var(--medium);
+  color: #eee;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.navbar {
+  padding: 10px 20px;
+  text-align: center;
+  background: var(--lighter);
+}
+
+.navbar h2 {
+  margin: 10px 0;
+}
+
+.lesson-list {
+  padding: 20px;
+}
+
+.lesson-list ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.lesson-list li {
+  background: var(--lighter);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.lesson-list li:hover {
+  background: var(--dark);
+  transition: transform 0.25s ease-out;
+  transform: scale(1.1);
+}
+
+.lesson-list .title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.lesson-list .professor {
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+.empty {
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 5px 0;
+  background: var(--dark);
+  color: #fff;
+  border: none;
+}
+
+input[type='submit'] {
+  margin: 10px auto;
+  background: var(--lighter);
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: block;
+  cursor: pointer;
+}
+
+.edit-lesson input[type='submit'] {
+  background: var(--dark);
+}
+
+.lesson-list li:hover input{
+  background: var(--lighter);
+}
+
+.lesson-list li:hover .edit{
+  background: var(--lighter);
+}
+
+.delete {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 100%;
+  background: #7e1624;
+  color: #eee;
+  cursor: pointer;
+}
+
+.edit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  background: var(--dark);
+  cursor: pointer;
+}
+
+.edit:hover, .delete:hover, input[type='submit']:hover {
+  transform: scale(0.9);
+  transition: transform .25s ease;
+}
